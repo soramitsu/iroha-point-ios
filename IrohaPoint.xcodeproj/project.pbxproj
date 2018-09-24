@@ -63,7 +63,6 @@
 		8A74FCFF20D3D5DB001AF40B /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADAC20A20CDE933008C9DFA /* KeychainAccess.framework */; };
 		8A74FD0120D3D9C9001AF40B /* SwiftyIroha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74FD0020D3D9C9001AF40B /* SwiftyIroha.framework */; };
 		8A74FD0220D519AE001AF40B /* SwiftyIroha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74FD0020D3D9C9001AF40B /* SwiftyIroha.framework */; };
-		8A74FD0320D519AE001AF40B /* SwiftyIroha.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A74FD0020D3D9C9001AF40B /* SwiftyIroha.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A74FD0B20D83C49001AF40B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A74FD0A20D83C49001AF40B /* BaseTableViewController.swift */; };
 		8A7C85C820C9F03C0048961C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C85C720C9F03C0048961C /* BaseView.swift */; };
 		8A7C85CA20C9F0550048961C /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C85C920C9F0550048961C /* StoryboardView.swift */; };
@@ -133,7 +132,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8A74FD0320D519AE001AF40B /* SwiftyIroha.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,13 +1047,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SkyFloatingLabelTextField.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyIroha.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		8DED6C275C04473AFEDD7C32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1395,7 +1394,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.soramitsu.IrohaPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1422,7 +1421,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.soramitsu.IrohaPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

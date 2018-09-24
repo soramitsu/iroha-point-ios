@@ -6,7 +6,7 @@ target 'IrohaPoint' do
   use_frameworks!
 
   # Pods for IrohaPoint
-  pod 'SwiftGRPC'
+  pod 'SwiftGRPC', '= 0.4.3'
   pod 'PKHUD'
   pod 'SDWebImage', '~> 4.0'
   pod 'ReachabilitySwift'

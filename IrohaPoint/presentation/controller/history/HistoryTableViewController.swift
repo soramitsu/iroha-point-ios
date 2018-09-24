@@ -4,8 +4,7 @@ class HistoryTableViewController: UITableViewController {
 
     var interactor: HistoryInteractorInput!
 
-    var sections = [String]()
-    var transactions = [[TransactionHistory]]()
+    var transactions = [TransactionHistory]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +56,8 @@ class HistoryTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView,
-                            numberOfRowsInSection section: Int) -> Int {
-
-        if transactions.count == 0 {
-            tableView.separatorStyle = .none
-            return 1
-        }
-
-        tableView.separatorStyle = .singleLine
-        return transactions[section].count
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if transactions.count == 0 {
-            return 1
-        }
-        return sections.count
+        return 1
     }
 }
 
